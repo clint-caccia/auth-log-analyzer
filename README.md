@@ -104,6 +104,11 @@ The tests cover each parser pattern, each detection rule, and the cases that sho
 - It only knows OpenSSH and sudo message formats.
 - Ideas: GeoIP lookup for attacker IPs, a live `--follow` mode like `tail -f`, and exporting to a SIEM format.
 
+## Related projects
+
+- [phishing-email-analyzer](https://github.com/clint-caccia/phishing-email-analyzer): catches the phishing emails that steal the passwords this tool would see being used.
+- [nist-csf-risk-assessment](https://github.com/clint-caccia/nist-csf-risk-assessment): a CSF 2.0 assessment where this kind of log review covers the Detect function (DE.CM and DE.AE).
+
 ## About the sample data
 
 All of the sample log data is fake. Attacker IPs come from the ranges reserved for documentation (`192.0.2.0/24`, `198.51.100.0/24`, `203.0.113.0/24`), so they don't belong to anyone.
